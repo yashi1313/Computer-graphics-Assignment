@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+
+	void main()
+	{
+	 int gd=DETECT,gm;
+	 initgraph(&gd,&gm,"C:\\TurboC3\\BGI");
+
+	 int x,y,tx,ty,new_x,new_y;
+	 x=100;
+	 y=100;
+	 outtextxy(50,50,"Orginal position of the object");
+	 circle(x,y,15);
+	 tx=100;
+	 ty=100;
+	 new_x=x+tx;
+	 new_y=y+ty;
+
+	 outtextxy(new_x-40,new_y-40,"After translation");
+	 circle(new_x,new_y,15);
+
+	 getch();
+	 closegraph();
+	}
